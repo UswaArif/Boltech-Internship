@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Tasks</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />  
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+        <link rel="stylesheet" type="text/css" href="css/mytask.css" />  
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+        <!-- TO make website responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="authme()">
+        <header class="header">
+            <div class="header-logo">
+                <h2 class="logo">CRUDify</h2>
+            </div>
+            <div class="navbars">
+                <nav class="navbar1">
+                    <ul>
+                        <li><a href="dashboard.html">All User</a></li>
+                        <li><a href="addUser.html">Add User</a></li>
+                        <li><a href="myTasks.html" class="active">My Tasks</a></li>
+                    </ul>
+                </nav>
+        
+                <nav class="navbar2">
+                    <ul>
+                        <li class="name"><a href="#" id="nameUser"> <i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="index.html">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            </div>
+                        </li>
+                        <li class="circle-image">
+                            <a href="#"><img src="images\login.png" alt="Profile Image" id="imageUser"></a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+
+        <section class="page-content-task">
+            <h1>My Todos <i class="fa-solid fa-clipboard-list"></i></h1>
+            <div class="todo-add">
+                <form class="taskform" id="taskform">
+                    <input type="text" name="task" placeholder="Enter here...">            
+                    <button type="submit"><i class="fa-solid fa-square-plus"></i></button>
+                </form>
+            </div>
+
+            <div id="task-data"></div>
+        </section>
+
+        <script src="js/authme.js"></script>
+        <script src="js/myTask.js"></script> 
+    </body>
+</html>

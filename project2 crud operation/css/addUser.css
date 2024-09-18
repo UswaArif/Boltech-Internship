@@ -1,0 +1,68 @@
+.user-container{
+    margin: 50px;
+}
+
+.user-container p{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(39, 66, 94);
+    margin-bottom: 20px;
+}
+
+.user-container-form{
+    width: 100%;
+    color: rgb(39, 66, 94);
+}
+
+.user-container-form form{
+    width: 100%;
+    background-color: rgb(39, 66, 94);
+    color: white;
+
+}
+
+.row-wrap{
+    padding: 30px;
+}
+
+.row{
+    display: flex;
+    padding: 15px;
+}
+
+.row-data{
+    display: block;
+    margin-right: 40px;
+}
+
+.row-data input{
+    margin-top: 10px;
+    width: 420px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.row-data select{
+    margin-top: 10px;
+    width: 420px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.transparent-button{
+    margin-top: 20px;
+    margin-left: 15px;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.transparent-button:hover{
+    background: rgb(87, 184, 250);
+    border: 3px solid rgb(87, 184, 250);
+}

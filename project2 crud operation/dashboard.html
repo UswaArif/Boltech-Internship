@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css" /> 
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+        <!-- TO make website responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="authme()">
+        <header class="header">
+            <div class="header-logo">
+                <h2 class="logo">CRUDify</h2>
+            </div>
+            <div class="navbars">
+                <nav class="navbar1">
+                    <ul>
+                        <li><a href="#" class="active">All User</a></li>
+                        <li><a href="addUser.html">Add User</a></li>
+                        <li><a href="myTasks.html">My Tasks</a></li>
+                    </ul>
+                </nav>
+        
+                <nav class="navbar2">
+                    <ul>
+                        <li class="name"><a href="#" id="nameUser"> <i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="index.html">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            </div>
+                        </li>
+                        <li class="circle-image">
+                            <a href="#"><img src="images\login.png" alt="Profile Image" id="imageUser"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-content">
+            <div class="search-bar">
+                <form id="searchForm">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search" placeholder="Search here.." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="count"><strong>Locating  <span id="userCount">0</span> User Accounts</strong></div>
+            <div id="data"></div>
+
+        </section>
+
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit User</h2>
+                <form id="userEditForm">
+                    <div class="row-wrap">
+                        <div class="row">
+                            <div class="row-data">
+                                <input type="hidden" id="editUserId">
+                                <label>Image URL:</label><br>
+                                <input type="text" id="editImageUrl" readonly><br>
+                            </div>
+                            <div class="row-data">
+                                <label>First Name:</label><br>
+                                <input type="text" id="editFirstName" required><br>
+                            </div>                           
+                            <div class="row-data">
+                                <label>Last Name:</label><br>
+                                <input type="text" id="editLastName" required><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="row-data">
+                                <label>Phone Number:</label><br>
+                                <input type="text" id="editPhoneNumber" required><br>
+                            </div>
+                            <div class="row-data">
+                                <label>Email:</label><br>
+                                <input type="text" id="editEmail" required><br>
+                            </div>
+                            <div class="row-data">
+                                <label>Address:</label><br>
+                                <input type="text" id="editAddress" required><br>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="row-data">
+                                <label>Date Of Birth:</label><br>
+                                <input type="date" id="editDateOfBirth" required><br>
+                            </div>
+                            <div class="row-data">
+                                <label>Age:</label><br>
+                                <input type="number" id="editAge" required><br>
+                            </div>
+                            <div class="row-data">
+                                <label>Gender:</label><br>
+                                <select id="editGender" required>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select><br>
+                            </div>
+                        </div>
+                    </div>              
+                         
+                    <button type="submit" class="transparent-button">Save Changes</button>
+                    <button type="button" id="cancelEdit">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Modal -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content-delete">
+                <span class="closeDelete">&times;</span>
+                <h2>Delete User</h2>
+                <p>Are you sure you want to delete this user?</p>
+                <form id="userDeleteForm">
+                    <label>Name: </label>
+                    <input type="hidden" id="deleteUserId">
+                    <input type="text" id="deletefirstName" readonly><br>    
+                    <button type="submit" class="button-red-delete">Confirm</button>
+                    <button type="button" id="cancelDelete">Cancel</button>
+                </form>
+            </div>
+        </div>
+
+
+        <script src="js/authme.js"></script> 
+        <script src="js/getAllUsers.js"></script>
+    </body>
+</html>

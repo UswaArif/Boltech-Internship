@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUDIFY</title>
+        <link rel="stylesheet" type="text/css" href="css/login.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/main.css" /> 
+
+        <!-- TO make website responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="header">
+            <h2 class="logo">CRUDify</h2>
+        </header>
+        <section class="login-body">
+            <div class="login-form">
+                <img alt="login" src="images/person2.png" class="login-image">
+                <h3>Member Login</h3>
+
+                <form class="myform" >
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                    <label for="pwd">Password</label><br>
+                    <input type="password" id="password" name="pwd" placeholder="Enter Password" required>
+                    <button type="button" onclick="getInputValue()" class="button">Submit</button> 
+                </form>
+            </div>
+            <div id="message"></div>
+        </section>
+
+        <script src="js/login.js"></script>
+    </body>
+</html>

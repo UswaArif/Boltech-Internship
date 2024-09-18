@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add User Page</title>
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/addUser.css" />
+
+
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- TO make website responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="authme()">
+        <header class="header">
+            <div class="header-logo">
+                <h2 class="logo">CRUDify</h2>
+            </div>
+            <div class="navbars">
+                <nav class="navbar1">
+                    <ul>
+                        <li><a href="dashboard.html">All User</a></li>
+                        <li><a href="addUser.html" class="active">Add User</a></li>
+                        <li><a href="myTasks.html">My Tasks</a></li>
+                    </ul>
+                </nav>
+        
+                <nav class="navbar2">
+                    <ul>
+                        <li class="name"><a href="#" id="nameUser"> <i class="fa-solid fa-angle-down"></i></a>
+                            <div class="dropdown-content">
+                                <a href="index.html">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            </div>
+                        </li>
+                        <li class="circle-image">
+                            <a href="#"><img src="images\login.png" alt="Profile Image" id="imageUser"></a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+
+        <section class="user-container">
+            <p>Add User <i class="fa-solid fa-user-plus"></i></p>
+            
+            <div class="user-container-form">
+                <form id="addUserForm">
+                    <div class="row-wrap">
+                        <div class="row">
+                            <div class="row-data">
+                                <label>Image URL:</label><br>
+                                <input type="text" name="imageUrl" placeholder="" required>
+                            </div>
+                            <div class="row-data">
+                                <label>First Name:</label><br>
+                                <input type="text" name="firstName" placeholder="e.g. Fakher" required>
+                            </div>
+                            <div class="row-data">
+                                <label>Last Name:</label><br>
+                                <input type="text" name="lastName" placeholder="e.g. Zaman" required>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="row-data">
+                                <label>Phone Number:</label><br>
+                                <input type="text" name="phoneNumber" placeholder="e.g. +92 300 0000000" required>
+                            </div>
+                            <div class="row-data">
+                                <label>Email:</label><br>
+                                <input type="text" name="email" placeholder="e.g. fakherzamanofficial@gmail.com" required>
+                            </div>
+                            <div class="row-data">
+                                <label>Address:</label><br>
+                                <input type="text" name="address" placeholder="e.g. Shahdara 4th Street G.T Road" required>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="row-data">
+                                <label>Date Of Birth:</label><br>
+                                <input type="date"  name="dateOfBirth" required>
+                            </div>
+                            <div class="row-data">
+                                <label>Age:</label><br>
+                                <input type="number" name="age" placeholder="e.g. 23" required>
+                            </div>
+                            <div class="row-data">
+                                <label>Gender:</label><br>
+                                <select id="gender" name="gender" required>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="transparent-button" id="addUserButton">Add User</button>
+                    </div>                    
+                </form>
+            </div>
+        </section>
+
+        <script src="js/authme.js"></script> 
+        <script src="js/getAllUsers.js"></script>
+    </body>
+</html>
