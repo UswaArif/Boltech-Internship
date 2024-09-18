@@ -1,0 +1,1129 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Roboto, Lato, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*-----Header Design -----*/
+
+.header {
+    display: flex; 
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: #005fbe;
+    align-items: center; 
+    padding: 0 160px; 
+    z-index: 1000;
+}
+
+
+.header-logo img {
+    margin-top: 5px;
+    width: 100px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.navbars{
+    display: flex;
+    margin-left: 20px;
+    gap: 120px;
+    border-color: #005fbe;   
+}
+
+nav{
+    background-color: #005fbe;    
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    white-space: nowrap;
+}
+
+nav li{
+    height: 70px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover{
+    background-color: #014a93;
+}
+
+#menu-icon{
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+
+/*---------------Start Page Section Design -----------------------*/
+
+.page-content{
+    background: #E9F1FA;
+    padding-top: 120px;
+    padding-left: 160px;
+    height: 580px;
+    position: relative;
+}
+
+.home-page{
+    display: flex;
+}
+
+.home-page-left .text{
+    font-weight: 400 !important;
+    text-align: left !important;
+    margin-top: 22px;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    gap: 25px;
+}
+
+.button-green, .button-white {
+    display: inline-block; 
+    text-align: center;
+    padding: 10px 20px; 
+    border-radius: 2px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.button-green {
+    background-color: #53c553;
+    color: white;
+    border: 2px ; 
+}
+
+.button-white {
+    background-color: white;
+    color: #005fbe; 
+}
+
+.button-green:hover {
+    background-color: #28a745;     
+}
+
+.button-white:hover {
+    background-color: #005fbe; 
+    color: white; 
+    border-color: #005fbe;   
+}
+
+.home-page-right {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background-image: url("task-imgs/rightpic.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    width: 44%;
+    height: 100%;   
+}
+
+/*----- Introduction Section Design -----*/
+.introduction{
+    padding: 80px  170px;
+}
+
+.introduction-container{
+    text-align: center;
+}
+
+.introductin-para{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.introductin-para p{
+    font-size: 20px;
+}
+
+.introduction-row-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-contents{
+    text-align: center; 
+    padding: 20px;  
+}
+
+.row-contents a{
+    margin-bottom: 10px;
+}
+
+.row-contents img{
+    height: 170px;
+    width: auto;
+    margin: 0 auto 16px;
+}
+
+.row-contents h5{
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: black;
+}
+
+.button-blue{
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #2991e1;
+    border-color: #2991e1;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    border: 1px solid transparent;
+    padding: 8px 14px;
+    font-size: 1.125rem;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-blue:hover {
+    background-color: #045a9b;     
+}
+
+.grok-para{
+    display: none;
+}
+
+/*-------------- Course List ---------- */
+
+.row-list {
+    background-color: #cee5f7;
+    padding: 8px 170px;
+    margin-bottom: 100px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-buttons {
+    flex: 1; 
+    margin: 10px;
+    text-align: center;
+}
+
+.list-buttons a {
+    width: 100%; 
+    max-width: 250px; 
+    padding: 10px 0; 
+}
+
+/*---- Learning Section -------*/
+.learning-list {
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+  
+  .learning-container {
+    margin-bottom: 60px;
+  }
+  
+  .learning-container h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .learning-content {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url("task-imgs/learning-interface-laptop.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+  }
+  
+  .learning-content-row {
+    display: block;
+    justify-content: space-between;
+    margin-top: 110px; 
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .content-1, 
+  .content-2 {
+    max-width: 250px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .content-1 {
+    position: absolute;
+    top: -100px;
+    left: -300px; 
+  }
+  
+  .content-2 {
+    position: relative;
+    top: -100px;
+    right: -530px;
+  }
+  
+  .learning-content-row img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+  
+  .learning-content-row h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 10px;
+  }
+  
+  .learning-content-row p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .learning-image{
+    display: none;
+  }
+
+/*---- Facilities Section -------*/
+.facilities-list{
+    width: 100%;
+    height: 450px;
+    padding: 0px 170px;
+    background-color: #fffcf0;
+    margin-bottom: 50px;
+}
+
+.facilities-content-row{
+    display: flex;
+}
+
+.row-data{
+    display: flex;
+    margin-top: 180px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.row-data img{
+    width: 80px;
+    height: 80px;
+    margin-right: 50px;
+    
+}
+
+.column-text h3{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: left;
+    margin-bottom: 11px;
+}
+
+.column-text p{
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+/*----- Testimonials Section -------*/
+.testimonials{
+    margin-top: 150px;
+    width: 100%;
+    padding: 0px 170px;
+}
+
+.testimonials h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 11px;
+}
+
+.para-margin{
+    margin: 0 100px;
+    padding: 40px 100px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.second-para{
+    text-align: center;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/*----------- Register Section ----------*/
+
+.register{
+    margin-top: 150px;
+    background-color: #fc4151;
+    width: 100%;
+    height: 300px;
+    padding: 100px 170px;
+    align-items: center;
+    text-align: center;
+}
+
+.register-content h2{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 11px;
+}
+
+.button-red{
+    margin: 20px 3px;
+    color: white;
+    display: inline-block; 
+    text-align: center;
+    padding: 10px 20px; 
+    border-radius: 2px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    white-space: nowrap;
+    background-color: transparent;
+    border: 2px solid white; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.button-red:hover {
+    background-color: white; 
+    color: #fc4151;    
+}
+
+/*--------------- Footer Section ------------*/
+.footer{
+    background-color: #005fbe;
+    color: white;
+    width: 100%;
+    height: 300px;
+    padding: 0 170px;
+    text-align: center;
+}
+
+.footer-content-row{
+    padding: 10px;
+
+}
+
+.footer-navbar{
+    margin-bottom: 10px;
+}
+
+.footer-navbar a{
+    margin-right: 20px;
+    color: white;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.footer-navbar a:hover{
+    color: #5ea9f4;
+}
+
+hr{
+    border: none; 
+    border-top: 4px solid #045491;    
+    margin-top: 15px; 
+}
+
+.footer-icons i{
+    margin-right: 30px;
+    font-size: 24px;
+}
+
+.footer-icons i:hover{
+    color: #5ea9f4;
+    cursor: pointer;
+}
+
+.para1{
+    font-size: 13px;
+}
+
+.footer-content-row p{
+    margin: 10px;
+}
+
+/* ----- Responsive Website ------ */
+@media (max-width: 1500px){
+    .header {
+        padding: 0 20px; 
+    }
+
+    .navbars {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #005fbe;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        max-height: 0; 
+        overflow: hidden; 
+        transition: max-height 0.5s ease-out;
+    }
+
+    .navbars nav.active {
+        max-height: 1000px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 15px 0; 
+        width: 100%;    
+        text-align: center; 
+    }
+
+    #menu-icon {
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        position: absolute; 
+        right: 20px;
+        transform: translateY(-50%); 
+        display: block;
+        border: 1px solid white;
+        border-radius: 2px;
+    }
+
+    #menu-icon:hover{
+        background-color: white;
+        color: #005fbe;
+    }
+
+    /*---------------Start Page Section Design -----------------------*/
+    .home-page-right {
+        left: 50%;
+        width: 50%; 
+    }
+
+
+    /*----- Introduction Section Design -----*/
+    .introduction{
+        padding: 50px  80px;
+    }
+
+    .introduction-row-data{
+        display: flex;
+    }
+    .grok-para-r{
+        display: none;
+    }
+    .grok-para{
+        display: block;
+        align-items: center;
+    }
+
+    /*-------------- Course List ---------- */
+    .row-list {
+        padding: 10px 100px;
+    }
+    
+    .list-buttons {     
+        margin: 10px; 
+        max-width: 100%; 
+        overflow: hidden; 
+    }
+    
+    .list-buttons a {
+        display: inline-block;
+        max-width: 100%; 
+        padding: 10px 8px; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+
+    /*---- Facilities Section -------*/
+    .facilities-list{
+        height: 450px;
+        padding: 100px 50px;
+    }
+
+    .facilities-content-row{
+        display: flex;
+        margin-top: 0px;
+    }
+
+    .row-data{
+        margin-top: 0px; 
+        width: 100%;
+        padding-top: 65px; 
+        box-sizing: border-box;
+    }
+
+
+    .column-text h3{
+        font-size: 18px;
+    }
+
+    .column-text p{
+        font-size: 18px;
+    }
+
+     /*----- Testimonials Section -------*/
+     .testimonials{
+        padding: 0 140px;
+    }
+
+    .testimonials h2{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .para-margin{
+        margin: 0 70px;
+        padding: 30px 0px;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .second-para{
+        font-size: 14px;
+    }
+
+    /*---- footer ------*/
+    .footer{
+        height: 250px;
+        padding: 0 0px;
+    }
+
+    .long-para1{
+        padding-bottom: 10px;
+    }
+    
+    .footer-content-row{
+        padding: 5px;   
+    }
+    
+    .footer-navbar{
+        margin-bottom: 10px;
+    }
+    
+    .footer-navbar a{
+        margin-right: 30px;
+    }
+       
+    .footer-content-row p{
+        margin: 0;
+    }
+}
+
+@media (max-width: 1000px){
+    /*---------------Start Page Section Design -----------------------*/
+    .page-content{
+        padding-top: 90px;
+        padding-left: 0px;
+        height: 660px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home-page{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    .button-green, .button-white {
+        z-index: 10; 
+    }
+
+
+    .home-page-left .text{
+        margin-right: 40px;
+        line-height: 48px;
+        margin-bottom: 30px;
+    }
+
+    .home-buttons {
+        display: flex;
+        flex-direction: row;
+        width: auto; 
+        gap: 25px;
+        justify-content: center;
+    }
+    
+    .home-buttons a {
+        flex: 1; 
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .home-page-right {
+        left: 25%; 
+        height: 100%; 
+        width: 50%;
+    }
+
+    /*----- Introduction Section Design -----*/
+    .introduction{
+        padding: 50px  0px;
+    }
+
+    .introduction-row-data{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .grok-para-r{
+        display: none;
+    }
+    .grok-para{
+        display: block;
+        align-items: center;
+    }
+
+    /*-------------- Course List ---------- */
+    .row-list {
+        padding: 10px 100px;
+    }
+    
+    .list-buttons {     
+        margin: 10px; 
+        max-width: 100%; 
+        overflow: hidden; 
+    }
+    
+    .list-buttons a {
+        display: inline-block;
+        max-width: 100%; 
+        padding: 10px 8px; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+    
+    /*---- Learning Section -------*/
+    .learning-list {
+        margin-bottom: 60px;
+        padding: 0 120px;
+    }
+    
+    .learning-container h2 {
+        margin-bottom: 0px;
+    }
+    
+    .learning-content {
+        padding: 0;
+        background-image: none;
+    }
+    
+    .learning-content-row {
+        margin-top: 30px; 
+    }
+    
+    .content-1, 
+    .content-2 {
+        max-width: 310px;
+    }
+    
+    .content-1 {
+        top: 0px;
+        left: -60px; 
+    }
+    
+    .content-2 {
+        top: 0px;
+        right: -310px;
+    }
+  
+    /*---- Facilities Section -------*/
+    .facilities-list{
+        height: 450px;
+        padding: 0 100px;
+        margin-bottom: 20px;
+    }
+
+    .facilities-content-row{
+        display: block;
+        margin-top: 0px;
+    }
+
+    .row-data{
+        margin-top: 0px; 
+        width: 100%;
+        padding-top: 65px; 
+        box-sizing: border-box;
+    }
+
+
+    .column-text h3{
+        font-size: 18px;
+    }
+
+    .column-text p{
+        font-size: 18px;
+    }
+    /*----- Testimonials Section -------*/
+    .testimonials{
+        padding: 0 40px;
+    }
+
+    .testimonials h2{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .para-margin{
+        margin: 0 70px;
+        padding: 30px 0px;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .second-para{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px){
+    
+    /*---------------Start Page Section Design -----------------------*/
+    .page-content{
+        padding-top: 90px;
+        padding-left: 70px;
+        height: 700px;
+    }
+
+    .home-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center buttons horizontally */
+        gap: 10px;
+        margin-right: 65px;
+    }
+    .button-green, .button-white {
+        z-index: 10; 
+    }
+
+    .home-page-left .text{
+        margin-right: 140px;
+        line-height: 48px;
+        margin-bottom: 30px;
+    }
+
+    .home-buttons {
+        display: flex;
+        flex-direction: column;
+        width: auto; 
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .home-page-right {
+        left: 22%;
+        right: 10%;   
+    }
+
+    /*----- Introduction Section Design -----*/
+    .introduction{
+        padding: 50px  20px;
+    }
+
+    .introduction-row-data{
+        display: block;
+    }
+    .grok-para-r{
+        display: none;
+    }
+    .grok-para{
+        display: block;
+        align-items: center;
+    }
+
+  /*-------------- Course List ---------- */
+    .row-list {
+        padding: 10px 0px;
+    }
+
+    .row {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .list-buttons {
+        flex: 1; 
+        margin: 18px;
+        text-align: center;
+    }
+
+    .list-buttons a {
+        max-width: 100%; 
+        padding: 10px 0; 
+    }
+
+    /*---- Learning Section -------*/
+    .learning-list {
+    margin-bottom: 0px;
+    padding: 0px 10px 30px;
+  }
+  
+  .learning-container {
+    margin-bottom: 0px;
+  }
+  
+  .learning-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .learning-content {
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 10px;
+    background-image: none;
+  }
+  
+  .learning-content-row {
+    margin-top: 0; 
+  }
+  
+  .content-1, 
+  .content-2 {
+    margin-left: 10px;
+    max-width: 220px;
+  }
+  
+  .content-1 {
+    top: 0px;
+    left: 0px; 
+    padding-right: 40px;
+  }
+  
+  .content-2 {
+    top: 0px;
+    right: -200px;
+  }
+  
+  .learning-content-row img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0;
+  }
+  
+  .learning-content-row h3 {
+    font-size: 14px;
+  }
+  
+  .learning-content-row p {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .learning-image{
+    display: block;
+    align-items: center;
+  }
+  .learning-image img{
+    width: 100%;
+    height: 100%;
+
+  }
+
+    /*---- Facilities Section -------*/
+    .facilities-list{
+        height: 450px;
+        padding: 0 0px;
+        margin-bottom: 20px;
+    }
+
+    .facilities-content-row{
+        display: block;
+        margin-top: 0px;
+    }
+
+    .row-data{
+        margin-top: 0px; 
+        width: 100%;
+        padding-top: 65px; 
+        box-sizing: border-box;
+    }
+
+
+    .column-text h3{
+        font-size: 14px;
+    }
+
+    .column-text p{
+        font-size: 14px;
+    }
+
+    /*----- Testimonials Section -------*/
+    .testimonials{
+        padding: 0;
+    }
+
+    .testimonials h2{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .para-margin{
+        margin: 0 70px;
+        padding: 30px 0px;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .second-para{
+        font-size: 14px;
+    }
+
+    /*----------- Register Section ----------*/
+    .register{
+        padding: 100px 10px;
+    }
+
+    .register-content h2{
+        font-size: 18px;
+    }
+
+    .button-red{
+        font-size: 1rem; 
+    }
+
+    /*---- footer ------*/
+    .footer{
+        height: 350px;
+        padding: 0 0px;
+    }
+
+    .long-para1{
+        padding-bottom: 10px;
+    }
+    
+    .footer-content-row{
+        padding: 5px;   
+    }
+    
+    .footer-navbar{
+        margin-bottom: 10px;
+    }
+    
+    .footer-navbar a{
+        margin-right: 30px;
+    }
+       
+    .footer-content-row p{
+        margin: 0px;
+    }
+}
+
+@media (max-width: 414px){
+    /*---------------Start Page Section Design -----------------------*/
+    .home-page-right {
+        left: 15%;
+        width: 70%;
+    }
+    
+    /*---- Learning Section -------*/
+    .learning-content {
+    max-width: 200px;
+    padding: 0 20px;
+    }
+
+    .content-1, 
+    .content-2 {
+    max-width: 220px;
+    }
+    
+    .content-1 {
+    left: -100px; 
+    }
+    
+    .content-2 {
+    right: -90px;
+    }
+    
+    .learning-content-row h3 {
+    font-size: 12px;
+    }
+    
+    .learning-content-row p {
+    font-size: 12px;
+    }
+
+      /*---- Facilities Section -------*/
+    .column-text h3{
+        font-size: 12px;
+    }
+
+    .column-text p{
+        font-size: 12px;
+    }
+
+    /*---- footer ------*/
+    .footer{
+        height: 380px;
+    }
+}
+ 
